@@ -1,112 +1,123 @@
-# Evaluación Final Spring Módulo 5  Desarrollo de aplicaciones web dinámicas con Java 
+# Evaluación Final Spring Módulo 5: Desarrollo de Aplicaciones Web Dinámicas con Java
+
 ## Sistema de Información para Empresa de Asesorías en Prevención de Riesgos
 
-# Integrantes:
-     - Diego Rivera
-     - Beatriz Maldonado
-     - Jorge Lira
-     - Jorge Montoya
+### Integrantes:
+- Diego Rivera
+- Beatriz Maldonado
+- Jorge Lira
+- Jorge Montoya
 
 ## Índice
 
-- [1. CONTEXTO](#1-CONTEXTO)
-- [2. PROBLEMA](#2-PROBLEMA)
-- [3. SOLUCIÓN](#3-SOLUCIÓN)
-- [4. OBJETIVOS DEL PROYECTO](#4-OBJETIVOS_DEL_PROYECTO)
-- [5. REQUISITOS DEL SISTEMA](#5-REQUISITOS_DEL_SISTEMA)
-- [6. ESTRUCTURA DEL PROYECTO](#6-ESTRUCTURA_DEL_PROYECTO)
-- [7. MODELO DE DATOS](#7-MODELO_DE_DATOS)
-- [8. REPOSITORIOS](#8-REPOSITORIOS)
+- [1. CONTEXTO](#1-contexto)
+- [2. PROBLEMA](#2-problema)
+- [3. SOLUCIÓN](#3-solución)
+- [4. OBJETIVOS DEL PROYECTO](#4-objetivos-del-proyecto)
+- [5. REQUISITOS DEL SISTEMA](#5-requisitos-del-sistema)
+- [6. ESTRUCTURA DEL PROYECTO](#6-estructura-del-proyecto)
+- [7. MODELO DE DATOS](#7-modelo-de-datos)
+- [8. REPOSITORIOS](#8-repositorios)
 
+---
 
 ## 1. CONTEXTO
 
-En la última década, han aumentado los índices de accidentabilidad, especialmente en las
-empresas del rubro industrial, minero y construcción. Las cifras son alarmantes, a pesar de las
-leyes y normativas que obligan a las empresas a tomar todaslas medidas necesarias para proteger
-la vida y salud de los trabajadores. Para dar cumplimiento a la normativa y mantener ambientes
-de trabajo seguros, muchas empresas se ven en la obligación de contratar asesoría profesional,
-lo cual representa un costo elevado y fomenta la disminución o la no implementación de medidas
-necesarias para la seguridad. Muchas de las empresas que han optado por no invertir en asesoría
-preventiva, se ven expuestas a aplicación de multas de las entidades fiscalizadoras, gastos por
-días perdidos en accidentabilidad, bajas en la producción, alzas en el pago de cotizaciones (al
-organismo administrador del seguro de accidentes del trabajo, ley 16.744), entre otros. Además,
-hay que considerar posibles demandas y pagos de indemnizaciones a lostrabajadores y familiares
-afectados por accidentes del trabajo.
-Un grupo de profesionales ha fundado una compañía de asesorías en prevención de riesgos
-laborales y necesita una solución tecnológica que ayude a administrar los procesos que se deben
-ejecutar en cada una de las empresas que son clientes de la compañía. Este servicio finalmente
-pretende ofrecer una solución completa en prevención de riesgos para las empresas a un costo
-razonable, cumpliendo estrictamente todos los procesos necesarios para dar cumplimiento a la
-normativa vigente, mejorando los ambientes de trabajo, la productividad, contribuyendo a un
-ahorro económico.
+En la última década, los índices de accidentabilidad han aumentado, especialmente en empresas de los sectores industrial, minero y de la construcción. A pesar de la existencia de leyes y normativas que obligan a las empresas a implementar medidas necesarias para proteger la vida y salud de los trabajadores, los incidentes han incrementado considerablemente.
+
+Las empresas del rubro de la prevención de riesgos tienen la responsabilidad de ofrecer soluciones efectivas y un sistema que permita gestionar toda la información necesaria para llevar un control adecuado. En este contexto, surge la necesidad de desarrollar un sistema de información que ayude a gestionar las operaciones diarias de una empresa de asesorías en prevención de riesgos.
+
+---
 
 ## 2. PROBLEMA
 
-La empresa no posee un sistema de información que le permita administrar toda la cantidad de
-información que se genera, ni controlar las actividades y el recurso humano. Existen problemas
-con la planificación de las visitas, generalmente los profesionales están en terreno por lo que no
+La empresa no posee un sistema de información adecuado que le permita:
+1. Administrar de forma eficiente la cantidad de información que se genera a diario.
+2. Controlar las actividades de prevención y la gestión de recursos humanos.
+3. Mantener un registro y control de los incidentes laborales.
+4. Gestionar la información de manera centralizada para la toma de decisiones.
 
-están disponibles para informarles sus actividades futuras. No existe registro del profesional que
-ha estado con mayor actividad ni se sabe dónde está cada uno.
-Las visitas a terreno a veces no tienen el efecto indicado por la falta de coordinación con el cliente.
-Asisten trabajadores que no tienen que ver con la charla, o bien, no se coordina la ejecución de
-la capacitación, lo que trae consigo multas para la empresa. No se tiene un control de los clientes
-que pagan y los que no, lo que hace que muchas actividades de los profesionales corran por
-cuenta de la empresa, generando desbalances financieros. Las actividades se registran en
-carpetas lo que dificulta el seguimiento de las asesorías y el resumen de resultados por empresa.
-Además, generalmente no se cumplen c iertas actividades de control de implementación de
-soluciones y a veces no se ha cumplido con la dirección del trabajo, lo que genera multas para los
-clientes, bajando la calidad del servicio. Los profesionales que han atendido la empresa
-esporádicamente han variado, no existiendo un registro de la totalidad de actividades preventivas
-realizadas y no se tiene certeza de los avances.
+Actualmente, estos procesos se realizan de manera manual o con sistemas poco eficientes, lo que incrementa la posibilidad de errores y retrasa las operaciones.
 
-## 3. SOLUCION
+---
 
-Es necesario desarrollar una solución tecnológica que cubra los procesos de negocio descritos y
-que proponga una mejora en la gestión, el control, la seguridad, y disponibilidad de información
-para la empresa y sus clientes. El sistema debe permitir la planificación de actividades y el control
-de ejecución de éstas, la gestión de clientes, la coordinación entre la empresa, los profesionales
-y los clientes para la respuesta temprana ante incidentes de seguridad. Además, se requiere que
-el sistema genere reportes y estadísticas que ayuden a tomar de decisiones y mejorar el
-rendimiento de la empresa, considerando la carga laboral, y la demanda de clientes y las
-actividades que cada uno involucra para el cumplimiento de los contratos. Es imprescindible,
-mantener comunicación con los profesionales en todo momento, aún en terreno, y darle la
-posibilidad de realizar todas sus actividades aun no teniendo conectividad (internet), ya que
-muchas empresas se encuentran en zonas donde no hay conexión de ese tipo.
+## 3. SOLUCIÓN
+
+Para resolver estos problemas, se propone el desarrollo de un **Sistema de Información Dinámico** que permita:
+1. Centralizar la información de clientes, capacitaciones y accidentes laborales.
+2. Gestionar el recurso humano de forma eficiente, permitiendo a los encargados tener acceso rápido a los datos relevantes.
+3. Facilitar la creación de reportes y análisis sobre las capacitaciones, accidentes y visitas en terreno.
+4. Mejorar la experiencia del usuario con una interfaz intuitiva y fácil de usar.
+5. Automatizar procesos clave para reducir el riesgo de errores y mejorar la eficiencia operativa.
+
+Este sistema se desarrollará utilizando tecnologías modernas como **Java** y **bases de datos Oracle**, siguiendo el patrón de diseño **MVC**.
+
+---
 
 ## 4. OBJETIVOS DEL PROYECTO
 
-* Desarrollar un sitio web dinámico bajo el patrón de diseño MVC.
-* Conectar el sitio web a una base de datos Oracle.
-* Implementar servlets y JSP para manejar la lógica del sistema.
-* Crear y gestionar clientes, profesionales y administrativos en la plataforma.
+- Desarrollar un sistema web dinámico que permita la gestión de la información de clientes, capacitaciones y accidentes laborales.
+- Implementar una solución escalable y adaptable a las necesidades de la empresa.
+- Proveer una interfaz de usuario amigable que permita a los empleados acceder y gestionar información de manera eficiente.
+- Automatizar procesos que actualmente se realizan de forma manual para reducir los tiempos de operación y el margen de error.
+- Conectar el sistema a una base de datos relacional para asegurar la integridad y disponibilidad de la información.
 
+---
 
 ## 5. REQUISITOS DEL SISTEMA
-*Java (JEE):** Servlets para manejar la lógica de negocio.
-*JSP:** Para generar contenido dinámico en el frontend.
-*Base de Datos:** Almacena toda la información relacionada con los clientes, capacitaciones, pagos, etc.
-*Apache Tomcat:** Servidor de aplicaciones utilizado para desplegar el proyecto.
-*Control de Versiones (GitHub):** El proyecto se encuentra en un repositorio público en GitHub.
+
+El sistema debe cumplir con los siguientes requisitos funcionales y no funcionales:
+
+### Requisitos Funcionales:
+1. Gestionar la información de los **clientes**.
+2. Registrar y gestionar las **capacitaciones** realizadas a los empleados.
+3. Registrar **accidentes laborales** y permitir la generación de reportes.
+4. Gestionar las **visitas en terreno** realizadas por los profesionales a las empresas clientes.
+5. Permitir la generación de **informes** de capacitación, accidentes y visitas.
+
+### Requisitos No Funcionales:
+1. El sistema debe ser accesible desde cualquier navegador moderno.
+2. El rendimiento del sistema debe permitir un acceso rápido a la información.
+3. Debe tener un diseño responsive que permita el acceso desde dispositivos móviles.
+4. La seguridad de los datos debe ser una prioridad, implementando autenticación y control de acceso.
+
+---
 
 ## 6. ESTRUCTURA DEL PROYECTO
-*Clases Java:** Manejan la lógica del sistema.**Interfaces:** Para definir los contratos de las funcionalidades.
-*JSP:** Para la presentación dinámica del contenido.
-*Hojas de Estilo:** Definición de estilos responsivos compartidos entre todas las páginas.
-*Scripts JS:** Comentados y debidamente organizados.
+
+El proyecto seguirá una arquitectura basada en el patrón de diseño **MVC (Modelo-Vista-Controlador)**, distribuyendo las responsabilidades en capas separadas para mejorar la mantenibilidad del sistema:
+
+1. **Modelo:** Encargado de la representación y manipulación de los datos (conexión a la base de datos Oracle).
+2. **Vista:** Proveerá la interfaz gráfica a través de una aplicación web dinámica y responsive.
+3. **Controlador:** Gestionará la lógica del sistema, conectando la vista con el modelo y gestionando las solicitudes de los usuarios.
+
+---
 
 ## 7. MODELO DE DATOS
-El sistema utiliza una base de datos Oracle con las siguientes tablas principales:
 
-*Usuarios (Clientes, Administrativos, Profesionales)
-*Capacitaciones
-*Pagos
-*Visitas
+El sistema gestionará los siguientes datos principales:
+
+1. **Clientes:** Información de las empresas que contratan los servicios de prevención de riesgos.
+2. **Capacitaciones:** Información detallada sobre las capacitaciones realizadas.
+3. **Accidentes Laborales:** Registro de accidentes ocurridos en las empresas clientes.
+4. **Visitas en Terreno:** Información de las visitas que los profesionales realizan a los clientes.
+
+El modelo de datos estará implementado en **Oracle**, garantizando la integridad referencial y permitiendo consultas eficientes mediante **SQL**.
+
+---
 
 ## 8. REPOSITORIOS
 
-- https://github.com/D3R5/Sprint-Final-Modulo-6
-- https://github.com/jorgemonval/Sprint-Final-Modulo-6
-- https://github.com/lyra-c/Sprint-Final-Modulo-6
-- https://github.com/Bemm12/Sprint-Final-Modulo-6
+- **Frontend:** El desarrollo del frontend se realizará utilizando tecnologías como **HTML**, **CSS**, **JavaScript** y frameworks como **Bootstrap** para un diseño responsivo y dinámico.
+- **Backend:** El backend será desarrollado en **Java**, utilizando el framework **Spring** para la gestión de controladores y acceso a la base de datos.
+- **Base de Datos:** La base de datos estará alojada en **Oracle**, utilizando **SQL** para el diseño e interacción con los datos.
+
+El código fuente del proyecto estará organizado en diferentes repositorios para facilitar su gestión y colaboración entre los integrantes del equipo:
+
+1. [Repositorio del Frontend](#enlace-frontend)
+2. [Repositorio del Backend](#enlace-backend)
+3. [Repositorio de la Base de Datos](#enlace-base-de-datos)
+
+---
+
+Fin del documento.
