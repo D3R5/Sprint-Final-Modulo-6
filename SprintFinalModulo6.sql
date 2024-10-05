@@ -18,7 +18,7 @@ FLUSH PRIVILEGES;
 USE prevencion_riesgos;
 
 -- Creación de las tablas
-CREATE TABLE Usuarios (
+CREATE TABLE crearUsuarios (
   id INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
   passwordusuario VARCHAR(100) NOT NULL,
@@ -96,16 +96,16 @@ CREATE TABLE Asistentes (
 );
 
 -- Insertando registros en la tabla Usuarios
-INSERT INTO Usuarios (nombre, passwordusuario, tipousuario, rutusuario, fechanacimiento, sexo, nombreEmpresa, direccion, telefonoContacto) 
+INSERT INTO crearUsuarios (nombre, passwordusuario, tipousuario, rutusuario, fechanacimiento, sexo, nombreEmpresa, direccion, telefonoContacto) 
 VALUES 
 ('Jacinto Duarte', '$2a$10$RG412hWu2sLRr7A6bXCDvOrXPxUEADC7Myd67fslHic/Lhb4ZwcTG', 'CLIENTE', '12345678-9', '1985-07-15', 'Masculino', 'EmpresaX', 'Calle Falsa 123', '555-1234');
-INSERT INTO Usuarios (nombre, passwordusuario, tipousuario, rutusuario, fechanacimiento, sexo, area, experienciaPrevia) 
+INSERT INTO crearUsuarios (nombre, passwordusuario, tipousuario, rutusuario, fechanacimiento, sexo, area, experienciaPrevia) 
 VALUES 
 ('Aurelio Flores', '$2a$10$RG412hWu2sLRr7A6bXCDvOrXPxUEADC7Myd67fslHic/Lhb4ZwcTG', 'ADMINISTRATIVO', '18765432-1', '1990-03-22', 'Femenino', 'Recursos Humanos', '5 años de experiencia en el área de personal');
-INSERT INTO Usuarios (nombre, passwordusuario, tipousuario, rutusuario, fechanacimiento, sexo, titulo, fechaIngreso) 
+INSERT INTO crearUsuarios (nombre, passwordusuario, tipousuario, rutusuario, fechanacimiento, sexo, titulo, fechaIngreso) 
 VALUES 
 ('Casimiro Monsalves', '$2a$10$8/QGI5KX3MOyynHbosT/G.3avydVwP1Ul/M0h7VO.aurl3dQdua.K', 'PROFESIONAL', '25678901-2', '1978-11-02', 'Masculino', 'Ingeniero en Prevención de Riesgos', '2015-06-15');
-INSERT INTO Usuarios (nombre, passwordusuario, tipousuario, rutusuario, sexo) 
+INSERT INTO crearUsuarios (nombre, passwordusuario, tipousuario, rutusuario, sexo) 
 VALUES 
 ('user1', '$2a$10$RG412hWu2sLRr7A6bXCDvOrXPxUEADC7Myd67fslHic/Lhb4ZwcTG', 'ADMINISTRATIVO', '23748265-3', 'Femenino');
 

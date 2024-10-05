@@ -15,7 +15,6 @@ import tech.awakelab.SprintFinalModulo6.model.bean.Cliente;
 import tech.awakelab.SprintFinalModulo6.model.bean.CrearUsuario;
 import tech.awakelab.SprintFinalModulo6.model.bean.Profesional;
 import tech.awakelab.SprintFinalModulo6.model.service.CrearUsuarioService;
-
 @Controller
 @RequestMapping("/usuarios") // ruta de usuarios
 public class CrearUsuarioController {
@@ -30,8 +29,7 @@ public class CrearUsuarioController {
 
     @PostMapping("/crear")
     public String create(
-            @RequestParam("id") int id,
-
+    		
         @RequestParam("tipoUsuario") String tipoUsuario,
         @RequestParam("nombre") String nombre,
         @RequestParam("passwordUsuario") String passwordUsuario,
@@ -52,15 +50,15 @@ public class CrearUsuarioController {
         // Crea una nueva instancia de CrearUsuario según el tipo proporcionado
         switch (tipoUsuario) {
             case "Cliente":
-                nuevoUsuario = new Cliente(id, nombre, passwordUsuario, rutUsuario, fechaNacimiento, sexo,
+                nuevoUsuario = new Cliente(0, nombre, passwordUsuario, rutUsuario, fechaNacimiento, sexo,
                         nombreEmpresa, direccion, telefonoContacto);
                 break;
             case "Profesional":
-                nuevoUsuario = new Profesional(id, nombre, passwordUsuario, rutUsuario, fechaNacimiento, sexo,
+                nuevoUsuario = new Profesional(0, nombre, passwordUsuario, rutUsuario, fechaNacimiento, sexo,
                         titulo, fechaIngreso);
                 break;
             case "Administrativo":
-                nuevoUsuario = new Administrativo(id, nombre, passwordUsuario, rutUsuario, fechaNacimiento, sexo,
+                nuevoUsuario = new Administrativo(0, nombre, passwordUsuario, rutUsuario, fechaNacimiento, sexo,
                         area, experienciaPrevia);
                 break;
             default:
@@ -80,5 +78,4 @@ public class CrearUsuarioController {
         model.addAttribute("usuarios", listaUsuarios); // Pasa la lista al modelo
         return "listarUsuarios"; // Nombre de la vista JSP
     }
-
 }
